@@ -1,0 +1,32 @@
++++++++++++++++++++++++++
++ character_history.php +
++++++++++++++++++++++++++
+URL PARAMETERS
+¤ key
+	the full API KEY (note: maybe do something to work with the partial key)
+¤ part
+	the part of history we want to retry (less is better for the server)
+	* full
+	* 
+CACHE
+	no cache at this stage (and maybe never cache)
+KEY and history
+	the first time a KEY is given to the Atys Memory API, the key is put in the DB and the data returned are the data retrieved from the official API, after that, the data from the official API are requested each 2 hours and the difference from the data already in db are saved to the db.
+	the next time a KEY is given to the Atys Memory API, the data are the current data (last data requested) with the history of data for this API KEY.
+	
++++++++++++++++++++++
++ guild_history.php +
++++++++++++++++++++++
+URL PARAMETERS
+¤ key
+	the full API KEY (note: maybe do something to work with the partial key)
+¤ part
+	the part of history we want to retry (less is better for the server)
+	* full
+	* 
+CACHE
+	no cache at this stage (and maybe never cache)
+KEY and history
+	the first time a KEY is given to the Atys Memory API, the key is put in the DB and the data returned are the data retrieved from the official API, after that, the data from the official API are requested each 2 hours and the difference from the data already in db are saved to the db.
+	the next time a KEY is given to the Atys Memory API, the data are the current data (last data requested) with the history of data for this API KEY.
+	

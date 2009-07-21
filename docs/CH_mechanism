@@ -1,0 +1,18 @@
+INPUT:
+	KEY
+	PART
+OUTPUT:
+	XML with request PART information
+	
+MECHANISM:
+	check in character_history in apikey(KEY) exist in the database
+	if NOT EXIST apikey(KEY)
+		retrieve the character xml from official API
+		check if the cid exists in the database
+		if EXIST cid
+			update the apikey with KEY
+		if NOT EXIST cid
+			add a new entry with the previously retrieved character xml
+	if EXIST apikey(KEY)
+		// do nothing
+	generate the xml with the db
