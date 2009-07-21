@@ -2,11 +2,10 @@
 
 	/*******************************/
 	
+	// Parameters for the database connection
+	include('dbb_params.inc.php');
+	
 	$shardid = "ani";
-	$db_host = "localhost";
-	$db_user = "root";
-	$db_pass = "";
-	$db_name = "ryzom_api";
 	$db_table = "guilds_list";
 	
 	/*******************************/

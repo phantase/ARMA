@@ -9,11 +9,9 @@
 
 	/*******************************/
 	
-	$ryzom_api_base_url = "http://atys.ryzom.com/api/";
-	$db_host = "localhost";
-	$db_user = "root";
-	$db_pass = "";
-	$db_name = "ryzom_api";
+	// Parameters for the database connection
+	include('dbb_params.inc.php');
+	
 	$db_table = "guilds_list";
 	
 	$shardid = "ani";
