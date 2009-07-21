@@ -24,7 +24,8 @@ function WriteHistoryFromSQL($sql){
 	for( $i = 0; $i < $f; $i++ ){
 		$tag_name = mysql_field_name($req,$i);
 		if( $tag_name != 'cid' && $tag_name != 'date' ){
-			print "<".$tag_name."_history>".$xmltab[$i]."</".$tag_name."_history>";
+			if( $xmltab[$i] != "" )
+				print "<".$tag_name."_history>".$xmltab[$i]."</".$tag_name."_history>";
 		}
 	}
 }
@@ -73,7 +74,8 @@ while( $data = mysql_fetch_array($req) ){
 for( $i = 0; $i < $f; $i++ ){
 	$tag_name = mysql_field_name($req,$i);
 	if( $tag_name != 'cid' && $tag_name != 'date' ){
-		print "<".$tag_name."_history>".$xmltab[$i]."</".$tag_name."_history>";
+		if( $xmltab[$i] != "" )
+			print "<".$tag_name."_history>".$xmltab[$i]."</".$tag_name."_history>";
 	}
 }
 print "</equipements_hands>";
