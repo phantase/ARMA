@@ -10,7 +10,7 @@ CREATE DATABASE `ryzom_api` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 ---------------------------------------------------------------------------------------------------
 
 -- CREATE GUILDS LIST TABLE --
-CREATE TABLE `ryzom_api`.`guilds_list` (
+CREATE TABLE `guilds_list` (
 `gid` INT NOT NULL ,
 `shardid` VARCHAR( 3 ) NOT NULL ,
 `name` VARCHAR(120) NOT NULL ,
@@ -30,7 +30,7 @@ UNIQUE (
 ---------------------------------------------------------------------------------------------------
 
 -- CREATE SINGLE CHARACTER TABLE --
-CREATE TABLE `ryzom_api`.`character_history` (
+CREATE TABLE `character_history` (
 `cid` INT NOT NULL ,
 `uid` INT NOT NULL ,
 `slot` INT NOT NULL ,
@@ -46,7 +46,7 @@ UNIQUE (
 );
 
 -- CREATE SINGLE CHARACTER INFO TABLE --
-CREATE TABLE `ryzom_api`.`character_info_history` (
+CREATE TABLE `character_info_history` (
 `cid` INT NOT NULL ,
 `name` VARCHAR(16) NOT NULL ,
 `titleid` VARCHAR(75) NOT NULL ,
@@ -60,7 +60,7 @@ CREATE TABLE `ryzom_api`.`character_info_history` (
 );
 
 -- CREATE SINGLE CHARACTER PHYS CARACS TABLE --
-CREATE TABLE `ryzom_api`.`character_phys_caracs_history` (
+CREATE TABLE `character_phys_caracs_history` (
 `cid` INT NOT NULL ,
 `constitution` INT NOT NULL ,
 `metabolism` INT NOT NULL ,
@@ -74,7 +74,7 @@ CREATE TABLE `ryzom_api`.`character_phys_caracs_history` (
 );
 
 -- CREATE SINGLE CHARACTER PHYS SCORES TABLE --
-CREATE TABLE `ryzom_api`.`character_phys_scores_history` (
+CREATE TABLE `character_phys_scores_history` (
 `cid` INT NOT NULL ,
 `hitpoints` INT NOT NULL ,
 `hitpoints_max` INT NOT NULL ,
@@ -88,7 +88,7 @@ CREATE TABLE `ryzom_api`.`character_phys_scores_history` (
 );
 
 -- CREATE SINGLE CHARACTER EQUIPHANDS TABLE --
-CREATE TABLE `ryzom_api`.`character_equiphands_history` (
+CREATE TABLE `character_equiphands_history` (
 `cid` INT NOT NULL ,
 `equipments_feet` VARCHAR(75) NOT NULL , -- Note: sheet#c#q (e.g. ictahb_3.sitem#0#250)
 `equipments_hands` VARCHAR(75) NOT NULL ,
@@ -111,7 +111,7 @@ CREATE TABLE `ryzom_api`.`character_equiphands_history` (
 );
 
 -- CREATE SINGLE CHARACTER FACTION POINTS TABLE --
-CREATE TABLE `ryzom_api`.`character_faction_points_history` (
+CREATE TABLE `character_faction_points_history` (
 `cid` INT NOT NULL ,
 `kami` INT NOT NULL ,
 `karavan` INT NOT NULL ,
@@ -123,7 +123,7 @@ CREATE TABLE `ryzom_api`.`character_faction_points_history` (
 );
 
 -- CREATE SINGLE CHARACTER FAMES TABLE --
-CREATE TABLE `ryzom_api`.`character_fames_history` (
+CREATE TABLE `character_fames_history` (
 `cid` INT NOT NULL ,
 `fyros` INT NULL ,
 `matis` INT NULL ,
@@ -195,7 +195,7 @@ CREATE TABLE `ryzom_api`.`character_fames_history` (
 );
 
 -- CREATE SINGLE CHARACTER PETS TABLE --
-CREATE TABLE `ryzom_api`.`character_pets_history` (
+CREATE TABLE `character_pets_history` (
 `cid` INT NOT NULL ,
 `pet0_sheet` VARCHAR(75) NOT NULL ,
 `pet0_price` DOUBLE NOT NULL ,
@@ -229,7 +229,7 @@ CREATE TABLE `ryzom_api`.`character_pets_history` (
 );
 
 -- CREATE SINGLE CHARACTER SKILLS TABLE --
-CREATE TABLE `ryzom_api`.`character_skills_history` (
+CREATE TABLE `character_skills_history` (
 `cid` INT NULL ,
 `SH` INT NULL,
 `SHF` INT NULL,
