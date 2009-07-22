@@ -35,7 +35,7 @@ if( mysql_num_rows( $req ) < 1 ){
 	$xml = simplexml_load_string($output);
 	
 	// Check if it's not an error (bad key, partial key instead of full key or something else...)
-	if($xml->getName() == 'error') die($xml);
+	if($xml->getName() == 'error') die($xml."</character_history>");
 	
 	// Retrieve the shardid for this character
 	$shardid = substr($xml->shard,0,3);
