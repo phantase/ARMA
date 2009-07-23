@@ -95,6 +95,7 @@ CREATE TABLE `character_equiphands_history` (
 `equipments_legs` VARCHAR(75) NOT NULL ,
 `equipments_arms` VARCHAR(75) NOT NULL ,
 `equipments_chest` VARCHAR(75) NOT NULL ,
+`equipments_head` VARCHAR(75) NOT NULL ,
 `equipments_ankle_l` VARCHAR(75) NOT NULL ,
 `equipments_ankle_r` VARCHAR(75) NOT NULL ,
 `equipments_wrist_l` VARCHAR(75) NOT NULL ,
@@ -474,3 +475,115 @@ CREATE TABLE `character_skills_history` (
 --                                            GUILD TABLES                                                       --
 ---------------------------------------------------------------------------------------------------
 
+-- CREATE SINGLE GUILD TABLE --
+CREATE TABLE `guild_history` (
+`gid` INT NOT NULL ,
+`shard` VARCHAR(10) NOT NULL ,
+`race` VARCHAR(10) NOT NULL ,
+`icon` VARCHAR(50) NOT NULL ,
+`creation_date` DOUBLE NOT NULL ,
+`apikey` VARCHAR( 30 ) NOT NULL ,
+`date_first` DOUBLE NOT NULL ,
+`date_last` DOUBLE NOT NULL ,
+UNIQUE (
+`gid`
+)
+);
+
+-- CREATE SINGLE CHARACTER INFO TABLE --
+CREATE TABLE `guild_info_history` (
+`gid` INT NOT NULL ,
+`name` VARCHAR(16) NOT NULL ,
+`description` VARCHAR(200) NOT NULL ,
+`money` DOUBLE NOT NULL ,
+`cult` VARCHAR(10) NOT NULL ,
+`civ` VARCHAR(10) NOT NULL ,
+`building` VARCHAR(15) NOT NULL ,
+`motd` VARCHAR(200) NOT NULL ,
+`members` INT NOT NULL ,
+`date` DOUBLE NOT NULL 
+);
+
+-- CREATE SINGLE GUILD FAMES TABLE --
+CREATE TABLE `guild_fames_history` (
+`gid` INT NOT NULL ,
+`fyros` INT NULL ,
+`matis` INT NULL ,
+`tryker` INT NULL ,
+`zorai` INT NULL ,
+`bandit` INT NULL ,
+`civil` INT NULL ,
+`degen` INT NULL ,
+`fauna` INT NULL ,
+`fauna_carnivore` INT NULL ,
+`fauna_herbivore` INT NULL ,
+`flora` INT NULL ,
+`goo` INT NULL ,
+`kami` INT NULL ,
+`karavan` INT NULL ,
+`kitin` INT NULL ,
+`tribe_ancient_dryads` INT NULL ,
+`tribe_antikamis` INT NULL ,
+`tribe_barkers` INT NULL ,
+`tribe_beachcombers` INT NULL ,
+`tribe_black_circle` INT NULL ,
+`tribe_cholorogoos` INT NULL ,
+`tribe_cockroaches` INT NULL ,
+`tribe_company_of_the_eternal_tree` INT NULL ,
+`tribe_corsair` INT NULL ,
+`tribe_cute` INT NULL ,
+`tribe_darkening_sap` INT NULL ,
+`tribe_dune_riders` INT NULL ,
+`tribe_ecowarriors` INT NULL ,
+`tribe_firebrands` INT NULL ,
+`tribe_first_deserter` INT NULL ,
+`tribe_frahar` INT NULL ,
+`tribe_frahar_hunters` INT NULL ,
+`tribe_gibbay` INT NULL ,
+`tribe_goo_heads` INT NULL ,
+`tribe_green_seed` INT NULL ,
+`tribe_hamazans_of_the_dead_seed` INT NULL ,
+`tribe_icon_workshipers` INT NULL ,
+`tribe_keepers` INT NULL ,
+`tribe_kitin_gatheres` INT NULL ,
+`tribe_lagoon_brothers` INT NULL ,
+`tribe_lawless` INT NULL ,
+`tribe_leviers` INT NULL ,
+`tribe_master_of_the_goo` INT NULL ,
+`tribe_matisian_border_guards` INT NULL ,
+`tribe_night_turners` INT NULL ,
+`tribe_oasis_diggers` INT NULL ,
+`tribe_pyromancers` INT NULL ,
+`tribe_recoverers` INT NULL ,
+`tribe_renegades` INT NULL ,
+`tribe_restorers` INT NULL ,
+`tribe_root_tappers` INT NULL ,
+`tribe_sacred_sap` INT NULL ,
+`tribe_sap_gleaners` INT NULL ,
+`tribe_sap_slaves` INT NULL ,
+`tribe_scorchers` INT NULL ,
+`tribe_shadow_runners` INT NULL ,
+`tribe_siblings_of_the_weeds` INT NULL ,
+`tribe_silt_sculptors` INT NULL ,
+`tribe_slavers` INT NULL ,
+`tribe_smuglers` INT NULL ,
+`tribe_the_arid_matis` INT NULL ,
+`tribe_the_kuilde` INT NULL ,
+`tribe_the_slash_and_burn` INT NULL ,
+`tribe_tutors` INT NULL ,
+`tribe_water_breakers` INT NULL ,
+`tribe_woven_bridles` INT NULL ,
+`date` DOUBLE NOT NULL 
+);
+
+-- TO BE THINKED --
+-- CREATE GUILD MEMBER HISTORY--
+CREATE TABLE `guild_member_history` (
+`gid` INT NOT NULL ,
+`cid` INT NOT NULL ,
+`name` VARCHAR(20) NOT NULL ,
+`grade` VARCHAR(10) NOT NULL ,
+`joined_date` DOUBLE NOT NULL ,
+`leaved_date` DOUBLE NULL ,
+`date` DOUBLE NOT NULL 
+);
