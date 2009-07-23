@@ -8,7 +8,7 @@ include('dbb_params.inc.php');
 
 // Check if the key is a parameter
 if( ! isset( $_GET['key'] ) )
-	die("Need key parameter");
+	die("Need key parameter</character_history>");
 
 // Retrieve the key
 $apikey = $_GET['key'];

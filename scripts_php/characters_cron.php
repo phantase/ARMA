@@ -362,6 +362,6 @@ while($dataAPIKEYS = mysql_fetch_assoc($reqAPIKEYS))
 
 mysql_close();
 
-printf( "NbKey: %d - NbKeyFailled: %d - NbUpdates: %d" , $apikeyNb , $apikeyFailed , $updates);
+printf( "NbKey: %d - NbKeyFailled: %d - NbUpdates: %d \n" , $apikeyNb , $apikeyFailed , $updates);
 
 ?>
